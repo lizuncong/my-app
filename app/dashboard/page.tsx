@@ -1,14 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Link from 'next/link'
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <Header></Header>
-      <Link href="/dashboard">Dashboard</Link>
-      华为 IC 资料图
+import { memo } from 'react'
+
+
+const Dashboard = memo(() => {
+
+    return <div>
+             华为 IC 资料图
       有报道称，华为内部已发布董秘1号文件，正式官宣2023年年度分红方案：ESOP（员工持股计划）每股分红1.5元，税后15.3%，同比去年税后收益有所降低。
       2月6日，澎湃新闻记者从华为员工处证实，这一分红方案属实，但正式分红需要等到今年3-4月份。
       华为2023年分红处于最近五年低位。也有分析人士认为，这或许预示着华为未来的发展将面临一定的资金压力和挑战。
@@ -190,7 +186,7 @@ export default function Home() {
       2021年，股价7.85元/股，每股分红1.58元；
       2022年，股价7.85元/股，每股分红1.61元；
       2023年，股价7.85元/股，每股分红1.5元。
-      <Footer></Footer>
-    </main>
-  );
-}
+    </div>
+})
+
+export default Dashboard
